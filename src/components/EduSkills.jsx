@@ -14,7 +14,7 @@ const EduSkills = () => {
     const fetchEducationData = async () => {
       try {
         const res = await fetch(
-          "http://localhost:5000/api/alleducation"
+          "http://localhost:7777/api/alleducation"
         );
         const data = await res.json();
         setEduDetails(data);
@@ -33,7 +33,7 @@ const EduSkills = () => {
     const fetchCertificateData = async () => {
       try {
         const res = await fetch(
-          "http://localhost:5000/api/certificates"
+          "http://localhost:7777/api/certificates"
         );
         const data = await res.json();
         setCertificates(data);
