@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect } from 'react';
-import BASE_URL from "../constants.js"
+import { BASE_URL } from "../constants.js";
+
 
 const SocialMediaContext = createContext();
 
