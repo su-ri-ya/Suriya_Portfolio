@@ -1,6 +1,7 @@
 import { FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import BASE_URL from "../constants.js"
 
 const Projects = () => {
   const [projectDetails, setProjectDetails] = useState([]);
@@ -9,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjectDetails = async () => {
       try {
-        const response = await fetch('http://localhost:7777/allprojects');
+        const response = await fetch(BASE_URL +'/allprojects');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
