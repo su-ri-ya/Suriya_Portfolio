@@ -4,7 +4,8 @@ import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp, FaNodeJs } from 'react-i
 import { SiJavascript, SiReact, SiTailwindcss, SiHtml5, SiCss3, SiPython } from 'react-icons/si';
 import Projects from './Projects';
 import SocialMediaContext from '../context/SocialMediaContext';
-import BASE_URL from "../constants.js"
+import { BASE_URL } from "../constants.js";
+
 
 const Main = () => {
   const { socialMediaLinks } = useContext(SocialMediaContext);
