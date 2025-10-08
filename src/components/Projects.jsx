@@ -1,7 +1,8 @@
 import { FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import BASE_URL from "../constants.js"
+import { BASE_URL } from "../constants.js";
+
 
 const Projects = () => {
   const [projectDetails, setProjectDetails] = useState([]);
