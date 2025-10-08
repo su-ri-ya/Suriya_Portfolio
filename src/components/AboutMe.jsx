@@ -18,7 +18,7 @@ const AboutMe = () => {
   };
   const handleDownloadCV = async () => {
     try {
-      const response = await fetch(BASE_URL+'resume'); // Replace with your actual CV endpoint
+      const response = await fetch(BASE_URL+'/resume'); // Replace with your actual CV endpoint
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
