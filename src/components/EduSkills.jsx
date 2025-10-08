@@ -2,6 +2,7 @@ import { FaGraduationCap, FaCode } from "react-icons/fa"; // Import icons for bo
 import { useEffect, useState } from "react";
 import { TbCertificate } from "react-icons/tb";
 import { motion } from "framer-motion";
+import BASE_URL from "../constants.js"
 
 const EduSkills = () => {
   const [eduDetails, setEduDetails] = useState([]);
@@ -14,7 +15,7 @@ const EduSkills = () => {
     const fetchEducationData = async () => {
       try {
         const res = await fetch(
-          "http://localhost:7777/alleducation"
+          BASE_URL + /alleducation"
         );
         const data = await res.json();
         setEduDetails(data);
