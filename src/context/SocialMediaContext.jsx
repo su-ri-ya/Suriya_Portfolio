@@ -1,8 +1,9 @@
 import { createContext, useState, useEffect } from 'react';
+import BASE_URL from "../constants.js"
 
 const SocialMediaContext = createContext();
 
-const API_URL = 'http://localhost:7777/socialmedia';
+const API_URL = '/socialmedia';
 
 export const SocialMediaProvider = ({ children }) => {
   const [socialMediaLinks, setSocialMediaLinks] = useState([]);
@@ -10,7 +11,7 @@ export const SocialMediaProvider = ({ children }) => {
   useEffect(() => {
     const fetchSocialMediaLinks = async () => {
       try {
-        const response = await fetch(API_URL);
+        const response = await fetch(BASE_URL + API_URL);
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
