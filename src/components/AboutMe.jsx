@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import EduSkills from './EduSkills';
 import { BASE_URL } from "../constants.js";
+import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   const textVariants = {
@@ -68,12 +69,12 @@ const AboutMe = () => {
 
           {/* Call-to-Action Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row items-center md:items-start space-y-4 sm:space-y-0 sm:space-x-4">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="inline-block bg-transparent border border-white text-white py-3 px-6 rounded-full transition-transform transform hover:scale-105 shadow-lg"
             >
               Get in Touch
-            </a>
+            </Link>
             <a
               onClick={handleDownloadCV}
               className="inline-block bg-transparent border border-white text-white py-3 px-6 rounded-full transition-transform transform hover:scale-105 shadow-lg"
