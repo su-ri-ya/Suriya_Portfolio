@@ -4,6 +4,7 @@ import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp, FaNodeJs } from 'react-i
 import { SiJavascript, SiReact, SiTailwindcss, SiHtml5, SiCss3, SiPython } from 'react-icons/si';
 import Projects from './Projects';
 import SocialMediaContext from '../context/SocialMediaContext';
+import BASE_URL from "../constants.js"
 
 const Main = () => {
   const { socialMediaLinks } = useContext(SocialMediaContext);
@@ -13,7 +14,7 @@ const Main = () => {
   const handleDownloadCV = async () => {
     setLoadingCV(true); // Start CV spinner
     try {
-      const response = await fetch('http://localhost:7777/resume'); // Replace with your actual CV endpoint
+      const response = await fetch( BASE_URL +'/resume'); // Replace with your actual CV endpoint
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
