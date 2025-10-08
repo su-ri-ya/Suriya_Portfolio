@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import EduSkills from './EduSkills';
-
+import BASE_URL from "../constants.js"
 const AboutMe = () => {
   const textVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -18,7 +18,7 @@ const AboutMe = () => {
   };
   const handleDownloadCV = async () => {
     try {
-      const response = await fetch('http://localhost:7777/resume'); // Replace with your actual CV endpoint
+      const response = await fetch(BASE_URL+'resume'); // Replace with your actual CV endpoint
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
