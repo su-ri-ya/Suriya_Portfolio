@@ -2,7 +2,7 @@ import { createContext, useState, useEffect } from 'react';
 
 const SocialMediaContext = createContext();
 
-const API_URL = 'http://localhost:7777/api/socialmedia';
+const API_URL = 'http://localhost:7777/socialmedia';
 
 export const SocialMediaProvider = ({ children }) => {
   const [socialMediaLinks, setSocialMediaLinks] = useState([]);
