@@ -15,7 +15,7 @@ const EduSkills = () => {
     const fetchEducationData = async () => {
       try {
         const res = await fetch(
-          BASE_URL + /alleducation"
+          BASE_URL + "/alleducation"
         );
         const data = await res.json();
         setEduDetails(data);
@@ -34,7 +34,7 @@ const EduSkills = () => {
     const fetchCertificateData = async () => {
       try {
         const res = await fetch(
-          "http://localhost:7777/certificates"
+          BASE_URL +"/certificates"
         );
         const data = await res.json();
         setCertificates(data);
