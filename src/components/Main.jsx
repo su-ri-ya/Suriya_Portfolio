@@ -13,7 +13,7 @@ const Main = () => {
   const handleDownloadCV = async () => {
     setLoadingCV(true); // Start CV spinner
     try {
-      const response = await fetch('http://localhost:7777/api/resume'); // Replace with your actual CV endpoint
+      const response = await fetch('http://localhost:7777/resume'); // Replace with your actual CV endpoint
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
